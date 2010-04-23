@@ -1,0 +1,15 @@
+<% if flash[:msg] %>
+<div id="mensagem">
+	<%=flash[:msg]%>
+</div>
+<% end %>
+
+<% form_for @Group, :html => { :multipart => :true } do |f| %>
+	<%=f.error_messages%>
+	<label>
+		Nome do Grupo:
+		<%=f.text_field :name %>
+	</label><br><br>
+	
+	<button type="submit">Salvar</button>
+<% end %>

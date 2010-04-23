@@ -1,0 +1,27 @@
+	<div id="Breadcrumb">
+		administração > <a href="<%=senders_path%>">disparos</a>
+	</div>
+	<div id="Content">
+		<span class="Titulo">Disparos de E-mails</span>
+		<div class="Linha"></div>
+		<div class="Toolbar">
+			<li class="Add"><%= link_to "Novo" , new_sender_path%></li>
+			<li class="Help"><a href="#" id="btnAjuda">Ajuda</a></li>
+		</div>
+		<%= render :file  => "layouts/_admhelp.html.erb" %>
+		<div id="Grid">
+			<table width="100%" cellspacing="0" cellpadding="0" border="0">
+			<% @Senders.each do |s| %>
+			<tr class="bgCinzaC">
+			<td class="Name"><li class="Bullet"><%=link_to s.title, sender_path(s) %></li></td>
+			<td class="Actions">
+				<li class="Edit"><%= link_to "Editar", edit_sender_path(s)%></li>
+				<li class="Del"><%= link_to "Excluir", sender_path(s), :method => :delete, :confirm => "Tem certeza?"%></li>
+        <li class="Del"><%= link_to "Enviar", import_mails_sender_path(s)%></li>
+			</td>
+			</tr>
+			<% end %>
+			</table>
+		</div>
+		<div class="Linha"></div>
+	</div>

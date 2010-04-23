@@ -1,0 +1,11 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  email: MyString
+  port: 1
+  smtp: MyString
+
+two:
+  email: MyString
+  port: 1
+  smtp: MyString

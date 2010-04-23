@@ -1,0 +1,9 @@
+class AddBgcolorToEmail < ActiveRecord::Migration
+  def self.up
+    add_column :email, :bgcolor, :string  
+  end
+
+  def self.down
+      remove_column :email, :bgcolor
+  end
+end

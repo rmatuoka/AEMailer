@@ -1,0 +1,35 @@
+<div id="Breadcrumb">
+		administração > login
+	</div>
+	<div id="Content">
+		<span class="Titulo">Login</span>
+		<div class="Linha"></div>
+		<div class="Toolbar">
+			<li class="Help"><a href="#">Ajuda</a></li>
+		</div>
+		
+		<div id="Grid">
+			<span>
+			<%if flash[:msg]%>
+				<%=flash[:msg]%>
+			<%end%>
+			</span>
+						
+			<%=form_tag sessions_path, :method => :post%>
+			<label>
+				Login: 
+				<input type="Text" value="" name="login" id="login">
+			</label>
+			<br><br>
+			<label>
+				Senha: 
+				<input type="Password" value="" name="password" id="password">
+			</label>
+			<br>
+	
+			<button>Login</button>
+		</form>
+		</div>
+		<div class="Linha"></div>
+	</div>
+

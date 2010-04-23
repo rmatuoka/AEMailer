@@ -1,0 +1,4 @@
+<b>Enviado em: </b><%= Time.now.to_s_br %><br />
+
+<%= @corpo %>
+

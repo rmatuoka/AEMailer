@@ -1,0 +1,18 @@
+<div id="Breadcrumb">
+		administração > <a href="/adm_cliente/">clientes</a>
+	</div>
+	<div id="Content">
+		<span class="Titulo">Clientes</span>
+		<div class="Linha"></div>
+		<div class="Toolbar">
+			<li class="Add"><%= link_to "Novo" , new_adm_cliente_path%></li>
+			<li class="Help"><a href="#">Ajuda</a></li>
+		</div>
+		
+		<div id="Grid">
+			<h3><%=@cliente.titulo%></h3><br>
+			<p><%=image_tag @cliente.logo.url(:thumb)%></p>
+		</div>
+		<div class="Linha"></div>
+	</div>
+

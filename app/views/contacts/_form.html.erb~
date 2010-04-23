@@ -1,0 +1,17 @@
+<% if flash[:msg] %>
+<div id="mensagem">
+	<%=flash[:msg]%>
+</div>
+<% end %>
+
+<% form_for ([@Group, @Contact]) do |f| %>
+	<%=f.error_messages%>
+	<label>
+		Contato(s):<br>
+		<%=f.text_area :email %><br>
+		<br>
+		*separe os e-mails por ,
+	</label><br><br>
+	
+	<button type="submit">Salvar</button>
+<% end %>

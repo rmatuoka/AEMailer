@@ -1,0 +1,4 @@
+class Group < ActiveRecord::Base
+    has_many_and_belongs_to :senders
+    has_many :contacts
+end

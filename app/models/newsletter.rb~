@@ -1,0 +1,4 @@
+class Newsletter < ActionMailer::Base
+  
+
+end

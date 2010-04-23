@@ -1,0 +1,35 @@
+<% if flash[:msg] %>
+<div id="mensagem">
+	<%=flash[:msg]%>
+</div>
+<% end %>
+
+<% form_for @Email, :html => { :multipart => :true } do |f| %>
+	<%=f.error_messages%>
+	<label>
+		Nome:
+		<%=f.text_field :title %>
+	</label><br><br>
+
+  <label>
+		Imagem:
+		<%=f.file_field :image %>
+	</label><br><br>
+
+  <label>
+		Link:
+		<%=f.text_field :link %>
+	</label><br><br>
+
+  <label>
+		Cor de fundo:
+		<%= f.text_field :bgcolor %>
+	</label><br><br>
+
+  <label>
+		Código Personalizado:
+		<%=f.text_area :html %>
+	</label><br><br>
+	
+	<button type="submit">Salvar</button>
+<% end %>

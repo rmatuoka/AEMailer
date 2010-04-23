@@ -1,0 +1,26 @@
+	<div id="Breadcrumb">
+		administração > <a href="<%=group_contacts_path%>">contatos</a>
+	</div>
+	<div id="Content">
+		<span class="Titulo">Contatos</span>
+		<div class="Linha"></div>
+		<div class="Toolbar">
+			<li class="Add"><%= link_to "Novo" , new_group_contact_path%></li>
+			<li class="Help"><a href="#" id="btnAjuda">Ajuda</a></li>
+		</div>
+		<%= render :file  => "layouts/_admhelp.html.erb" %>
+		<div id="Grid">
+			<table width="100%" cellspacing="0" cellpadding="0" border="0">
+			<% @Contacts.each do |g| %>
+			<tr class="bgCinzaC">
+			<td class="Name"><li class="Bullet"><%=link_to g.email, group_contacts_path(g) %></li></td>
+			<td class="Actions">
+				<li class="Edit"><%= link_to "Editar", edit_group_contact_path(@Group, g)%></li>
+				<li class="Del"><%= link_to "Excluir", group_contact_path(@Group, g), :method => :delete, :confirm => "Tem certeza?"%></li>
+			</td>
+			</tr>
+			<% end %>
+			</table>
+		</div>
+		<div class="Linha"></div>
+	</div>

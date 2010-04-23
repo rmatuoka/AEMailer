@@ -1,0 +1,11 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  email: MyString
+  senha: MyString
+  permissao_id: 1
+
+two:
+  email: MyString
+  senha: MyString
+  permissao_id: 1

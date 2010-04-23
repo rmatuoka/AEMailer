@@ -1,0 +1,300 @@
+*
+{
+	margin:0px;
+	padding:0px;
+	font-family:Century Gothic, Tahoma;
+}
+
+img
+{
+	border:none;
+}
+
+textarea
+{
+	width:100%;
+}
+
+body
+{
+	background-color:#656C85;
+	text-align:center;	
+}
+
+a:hover
+{
+	color:#ed1c24;
+}
+
+#Geral
+{
+	position:relative;
+	width:900px;
+	margin:auto;
+	text-align:left;
+}
+
+	#Geral #Header
+	{
+		position:relative;
+		width:100%;
+		height:128px;
+		background-image:url('../images/adm/bgHeader.gif');
+		background-repeat:no-repeat;
+		display:table;
+		border-bottom:1px solid #333333;
+	}
+	
+	#Geral #Header #Logo
+	{
+		position:relative;
+		top:34px;
+		left:24px;
+		background-image:url('../images/adm/logo.png');
+		width:119px;
+		height:64px;
+		float:left;
+	}
+	
+	#Geral #Header #Menu
+	{
+		position:absolute;
+		top:85px;
+		left:330px;
+	}
+	
+	#Geral #Header #Menu li
+	{
+		list-style-type: none;
+		background-repeat: no-repeat;
+		display:inline;
+		padding-bottom:10px;
+		margin-right:20px;
+	}
+	
+		#Geral #Header #Menu li.Noticias
+		{
+			background-image: url(../images/adm/icones/ico_noticias.png);		
+			background-position: 0px 0px;
+			padding-left: 30px; 
+		}
+		
+		#Geral #Header #Menu li.Usuarios
+		{
+			list-style-type: none;
+			background-image: url(../images/adm/icones/ico_usuarios.png);
+			background-position: 0px 0px;
+			padding-left: 30px;
+		}
+		
+		#Geral #Header #Menu li.Contatos
+		{
+			list-style-type: none;
+			background-image: url(../images/adm/icones/ico_contato.png);
+			background-position: 0px 0px;
+			padding-left: 30px; 
+		}
+		
+		#Geral #Header #Menu li.Cases
+		{
+			list-style-type: none;
+			background-image: url(../images/adm/icones/ico_cases.png);
+			background-position: 0px 0px;
+			padding-left: 30px; 
+		}
+		
+		#Geral #Header #Menu li.Clientes
+		{
+			list-style-type: none;
+			background-image: url(../images/adm/icones/ico_clientes.png);
+			background-position: 0px 0px;
+			padding-left: 30px; 
+		}
+	
+		#Geral #Header #Menu a
+		{
+			color:#4d4d4d;
+			font-size:12px;
+			text-decoration:none;
+		}
+		
+		#Geral #Header #Menu a:hover
+		{
+			color:#ed1c24;
+		}
+		
+	#Geral #Breadcrumb
+	{
+		position:relative;
+		font-size:10px;
+		color:#333333;
+		margin:13px 0px 60px 0px;
+	}
+	
+		#Geral #Breadcrumb a
+		{
+			text-decoration:none;
+			color:#333333;
+		}
+		
+	#Geral #Content
+	{
+		position:relative;
+		width:100%;
+	}
+	
+		#Geral #Content #HelpBox
+		{
+			background-color:#fed6d8;
+			border:1px solid #f8c3c3;
+			padding:3px;
+			color:#ea1b23;
+			font-size:10px;
+		}
+	
+	
+		#Geral #Content #Grid
+		{
+			position:relative;
+			top:0px;
+			left:0px;
+			width:100%;
+			margin-bottom:2px;
+			font-size:12px;
+			color:#999999;
+		}
+		
+		#Geral #Content .Titulo
+		{
+			color:#999999;
+			font-size:20px;
+		}
+		
+		#Geral #Content .Linha
+		{
+			position:relative;
+			width:100%;
+			height:2px;
+			margin-bottom:2px;
+			background-image:url('../images/adm/linha.jpg');
+			background-repeat:no-repeat;
+		}
+		
+		#Geral #Content .Toolbar
+		{
+			position:relative;
+			width:100%;
+			height:20px;
+			margin-bottom:2px;
+			background-image:url('../images/adm/bg_toolbar.png');
+			background-repeat:repeat-x;
+			text-align:right;
+
+		}
+		
+		#Geral #Content  li
+		{
+			list-style-type: none;
+			background-repeat: no-repeat;
+			display:inline;
+			margin-right:35px;
+		}
+	
+			#Geral #Content  li.Add
+			{
+				background-image: url(../images/adm/icones/ico_add.png);		
+				background-position: 0px 5px;
+				padding-left: 25px; 
+			}
+			
+			#Geral #Content  li.Help
+			{
+				background-image: url(../images/adm/icones/ico_help.png);		
+				background-position: 0px 5px;
+				padding-left: 25px; 
+			}
+			
+			#Geral #Content  li.Edit
+			{
+				background-image: url(../images/adm/icones/ico_edit.png);		
+				background-position: 0px 5px;
+				padding-left: 25px; 
+			}
+			
+			#Geral #Content  li.Del
+			{
+				background-image: url(../images/adm/icones/ico_del.png);		
+				background-position: 0px 5px;
+				padding-left: 25px; 
+			}
+			
+			#Geral #Content  li.Bullet
+			{
+				background-image: url(../images/adm/bullet.png);		
+				background-position: 0px 12px;
+				padding-left: 10px; 
+				margin-left:20px;
+			}
+			
+		#Geral #Content a
+		{
+			font-size:10px;
+			color:#cccccc;
+			text-decoration:none;
+		}
+		
+		#Geral #Content a:hover
+		{
+			color:ed1c24;
+		}
+		
+		#Geral #Content .bgCinzaC
+		{
+			background-color:#090909;
+		}
+		
+		.Name
+		{
+			width:700px;
+		}
+		
+		.Actions
+		{
+			text-align:right;
+		}
+		
+	#Geral #Footer
+	{
+		border-top:1px solid #333333;
+		color:#333333;
+		font-size:10px;
+		margin-top:10px;
+	}
+	
+.errorExplanation
+{
+	background-color:#fed6d8;
+	border:1px solid #f8c3c3;
+	padding:12px;
+}
+
+	.errorExplanation h2
+	{
+		color:#ea1b23;
+	}
+	
+	.errorExplanation p
+	{
+		color:#ea1b23;
+	}
+	
+	.errorExplanation li
+	{
+		color:#ea1b23;
+		margin-left:26px;
+	}
+
+.vermelho
+{
+	color:#ed1c24;
+}
