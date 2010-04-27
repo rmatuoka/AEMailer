@@ -1,0 +1,34 @@
+<% if flash[:msg] %>
+<div id="mensagem">
+	<%=flash[:msg]%>
+</div>
+<% end %>
+
+<% form_for @Sender, :html => { :multipart => :true } do |f| %>
+	<%=f.error_messages%>
+	<label>
+		Dê um nome ao seu disparo:
+		<%=f.text_field :title %>
+	</label><br><br>
+	
+	<label>
+		Qual será o assunto do e-mail?
+		<%=f.text_field :subject %>
+	</label><br><br>
+
+  <label>
+		Escolha o E-Mail Mkt que você deseja disparar:
+    <%= f.select :email_id , Email.find(:all).collect{|e| [e.title , e.id]}%>
+	</label><br><br>
+
+  <label>
+		Para que grupos você deseja enviar este e-mail?
+  <% Group.find(:all).each do |g| %>
+    <%= check_box_tag 'sender[group_ids][]', g.id, @Sender.groups.include?(g) %><%= g.name %>
+  <% end %>
+	</label><br><br>
+
+
+
+	<button type="submit">Salvar</button>
+<% end %>

@@ -1,0 +1,16 @@
+<div id="Breadcrumb">
+		administração > <a href="<%=users_path%>">usuários</a>
+	</div>
+	<div id="Content">
+		<span class="Titulo">Editar Usuário</span>
+		<div class="Linha"></div>
+		<div class="Toolbar">
+			<li class="Add"><%= link_to "Novo" , new_user_path%></li>
+			<li class="Help"><a href="#">Ajuda</a></li>
+		</div>
+		
+		<div id="Grid">
+			<%=render :partial => "form"%>
+		</div>
+		<div class="Linha"></div>
+	</div>

@@ -1,0 +1,25 @@
+<% if flash[:msg] %>
+<div id="mensagem">
+	<%=flash[:msg]%>
+</div>
+<% end %>
+
+<% form_for @User, :html => { :multipart => :true } do |f| %>
+	<%=f.error_messages%>
+	<label>
+		E-Mail:
+		<%=f.text_field :email %>
+	</label><br><br>
+
+  	<label>
+		Senha:
+		<%=f.text_field :senha %>
+	</label><br><br>
+	
+	<label>
+		Repita a senha:
+		<%=f.text_field :senha_confirmation %>
+	</label><br><br>
+	
+	<button type="submit">Salvar</button>
+<% end %>
