@@ -18,9 +18,19 @@ class ReportsController < ApplicationController
     
     #SELEECIONA TODOS SENDERS DA BASE GROUPS_SENDERS
     if @Report.date_start.blank? or @Report.date_end.blank?
-        @Sents = Sent.all(:conditions => ['sender_id = ? AND readed = ?', @Report.sender_id, @Report.readed])
+        if @Report.just_read > 0
+            @Sents = Sent.all(:conditions => ['sender_id = ? AND readed = ?', @Report.sender_id, @Report.readed])
+        else
+            @Sents = Sent.all(:conditions => ['sender_id = ?', @Report.sender_id])
+        end
+      
     else
-        @Sents = Sent.all(:conditions => ['sender_id = ? AND created_at >= ? AND created_at <= ? AND readed = ?', @Report.sender_id, @Report.date_start, @Report.date_end, @Report.just_read])
+        if @Report.just_read > 0
+            @Sents = Sent.all(:conditions => ['sender_id = ? AND created_at >= ? AND created_at <= ? AND readed = ?', @Report.sender_id, @Report.date_start, @Report.date_end, @Report.just_read])
+        else
+            @Sents = Sent.all(:conditions => ['sender_id = ? AND created_at >= ? AND created_at <= ?', @Report.sender_id, @Report.date_start, @Report.date_end])
+        end
+        
     end
 
   end

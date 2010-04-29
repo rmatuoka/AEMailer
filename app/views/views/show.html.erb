@@ -1,0 +1,24 @@
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+		<title></title>
+	<style>
+		*
+		{
+			margin:0px;
+			padding:0px;
+		}
+	</style>
+	</head>
+	<body marginheight="0" marginwidth="0" topmargin="0" leftmargin="0">
+	<%if @html%>
+		<%=@Email.html%>
+	<%else%>
+		<div style="background-color:<%=@Email.bgcolor%>; width:100%; height:100%;">
+			<p align="center"><a href="<%=@Email.link%>" target="_blank"><img src="<%=@Email.image%>" border="0"></p>
+		</div>
+	<%end%>
+	</body>
+</html>
+
+

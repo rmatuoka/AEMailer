@@ -47,6 +47,9 @@ class SentsController < ApplicationController
             #INSERE CONTROLE DE LEITURAS
             @corpo = @corpo + "<img src='#{@servidor}/sents/#{s.id.to_s}/read' style='visible:hidden;'>"
             
+            #INSERE CASO NAO CONSIGA VISUALIZAR
+            @corpo = @corpo + "<p align='center'><a href='#{@servidor}/views/#{@Email.id.to_s}' target='_blank'><font color='#666666' size='2' color='#CCCCCC'>Caso não consiga visualizar este email, clique aqui</font></a><p>"
+            
             if Newsletter.deliver_enviar(@corpo.to_s,@Sender.subject, @Contact.email)
                   #Enviou
                   s.sent = 1

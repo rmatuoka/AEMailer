@@ -17,7 +17,7 @@
 			<td class="Actions">
 				<li class="Edit"><%= link_to "Editar", edit_sender_path(s)%></li>
 				<li class="Del"><%= link_to "Excluir", sender_path(s), :method => :delete, :confirm => "Tem certeza?"%></li>
-        <li class="Del"><%= link_to "Importar E-Mails", import_mails_sender_path(s)%></li>
+        		<li class="Add"><%= link_to "Enviar", import_mails_sender_path(s)%></li>
 			</td>
 			</tr>
 			<% end %>

@@ -48,6 +48,7 @@ ActionController::Routing::Routes.draw do |map|
   map.resources :senders, :member => { :import_mails => :get}
   map.resources :sents, :member => { :read => :get, :success => :get}
   map.resources :reports
+  map.resources :views
 
   map.connect ':controller/:action/:id'
   map.connect ':controller/:action/:id.:format'
