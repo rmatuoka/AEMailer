@@ -1,0 +1,15 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  title: MyString
+  sender_id: 1
+  just_read: 1
+  date_start: 2010-04-28 17:56:16
+  date_end: 2010-04-28 17:56:16
+
+two:
+  title: MyString
+  sender_id: 1
+  just_read: 1
+  date_start: 2010-04-28 17:56:16
+  date_end: 2010-04-28 17:56:16

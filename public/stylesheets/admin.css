@@ -17,7 +17,7 @@ textarea
 
 body
 {
-	background-color:#656C85;
+	background-color:#C3C6D0;
 	text-align:center;	
 }
 
@@ -51,8 +51,8 @@ a:hover
 		top:34px;
 		left:24px;
 		background-image:url('../images/adm/logo.png');
-		width:119px;
-		height:64px;
+		width:83px;
+		height:80px;
 		float:left;
 	}
 	
@@ -113,14 +113,14 @@ a:hover
 	
 		#Geral #Header #Menu a
 		{
-			color:#4d4d4d;
+			color:#000000;
 			font-size:12px;
 			text-decoration:none;
 		}
 		
 		#Geral #Header #Menu a:hover
 		{
-			color:#ed1c24;
+			color:#9C0011;
 		}
 		
 	#Geral #Breadcrumb
@@ -161,12 +161,12 @@ a:hover
 			width:100%;
 			margin-bottom:2px;
 			font-size:12px;
-			color:#999999;
+			color:#000000;
 		}
 		
 		#Geral #Content .Titulo
 		{
-			color:#999999;
+			color:#9C0011;
 			font-size:20px;
 		}
 		
@@ -175,8 +175,9 @@ a:hover
 			position:relative;
 			width:100%;
 			height:2px;
-			margin-bottom:2px;
-			background-image:url('../images/adm/linha.jpg');
+			margin-bottom:5px;
+			margin-top:5px;
+			background-image:url('../images/adm/linha.png');
 			background-repeat:no-repeat;
 		}
 		
@@ -239,7 +240,7 @@ a:hover
 		#Geral #Content a
 		{
 			font-size:10px;
-			color:#cccccc;
+			color:#000000;
 			text-decoration:none;
 		}
 		
@@ -250,7 +251,7 @@ a:hover
 		
 		#Geral #Content .bgCinzaC
 		{
-			background-color:#090909;
+			background-color:#989DB0;
 		}
 		
 		.Name
@@ -262,6 +263,18 @@ a:hover
 		{
 			text-align:right;
 		}
+		
+	#Geral #mensagem
+	{
+		background-color:#fed6d8;
+		border:1px solid #f8c3c3;
+		padding:12px;
+	}
+		#Geral #mensagem h2
+		{
+			color:#ea1b23;
+		}
+	
 		
 	#Geral #Footer
 	{
@@ -298,3 +311,27 @@ a:hover
 {
 	color:#ed1c24;
 }
+
+.textfield
+{
+	/*background-color:#C2C6CF;*/
+	border:1px solid #B4B8C4;
+}
+.headerReports
+{
+	color:#A21020;
+	background-color:#B1B5C1;
+	font-weight:bold;
+	padding:10px;
+}
+.tableReports
+{
+	font-family:Century Gothic, Tahoma;
+	font-size:12px;
+}
+
+.tdReports
+{
+	border:1px solid #666666;
+}
+

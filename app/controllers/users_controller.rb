@@ -1,4 +1,6 @@
 class UsersController < ApplicationController
+    
+    before_filter :autentica
     layout "admin"
   
     def index
@@ -45,6 +47,14 @@ class UsersController < ApplicationController
       
         if @User.destroy
             redirect_to users_path
+        end
+    end
+    
+    def autentica
+        if session[:logged]
+          true
+        else
+          redirect_to new_session_path
         end
     end
 end

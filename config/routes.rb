@@ -39,12 +39,15 @@ ActionController::Routing::Routes.draw do |map|
   # Note: These default routes make all actions in every controller accessible via GET requests. You should
   # consider removing or commenting them out if you're using named routes and resources.
 
+  map.root :controller => "groups"
+  
   map.resources :users
   map.resources :sessions
   map.resources :groups, :has_many => :contacts
   map.resources :emails
   map.resources :senders, :member => { :import_mails => :get}
-  map.resources :sents, :member => { :read => :get}
+  map.resources :sents, :member => { :read => :get, :success => :get}
+  map.resources :reports
 
   map.connect ':controller/:action/:id'
   map.connect ':controller/:action/:id.:format'

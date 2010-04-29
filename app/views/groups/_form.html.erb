@@ -1,6 +1,6 @@
 <% if flash[:msg] %>
 <div id="mensagem">
-	<%=flash[:msg]%>
+	<h2><%=flash[:msg]%></h2>
 </div>
 <% end %>
 
@@ -8,7 +8,7 @@
 	<%=f.error_messages%>
 	<label>
 		Nome do Grupo:
-		<%=f.text_field :name %>
+		<%=f.text_field :name, :class => "textfield" %>
 	</label><br><br>
 	
 	<button type="submit">Salvar</button>

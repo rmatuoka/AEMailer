@@ -5,7 +5,7 @@
 		<span class="Titulo">Login</span>
 		<div class="Linha"></div>
 		<div class="Toolbar">
-			<li class="Help"><a href="#">Ajuda</a></li>
+			
 		</div>
 		
 		<div id="Grid">
@@ -15,18 +15,21 @@
 			<%end%>
 			</span>
 						
+			Bem vindo ao painel de administração do AE E-Mailer.<br>
+			Esta área é de acesso restrito, por favor digite o seu e-mail e senha de acesso para continuar.<br> 
+			<br>
 			<%=form_tag sessions_path, :method => :post%>
 			<label>
 				E-Mail: 
-				<input type="Text" value="" name="email" id="email">
+				<input type="Text" value="" name="email" id="email" class="textfield">
 			</label>
 			<br><br>
 			<label>
 				Senha: 
-				<input type="Password" value="" name="senha" id="senha">
+				<input type="Password" value="" name="senha" id="senha" class="textfield">
 			</label>
 			<br>
-	
+			<br>
 			<button>Login</button>
 		</form>
 		</div>

@@ -1,0 +1,42 @@
+<% if flash[:msg] %>
+<div id="mensagem">
+	<h2><%=flash[:msg]%></h2>
+</div>
+<% end %>
+
+<% form_for @Report, :html => { :multipart => :true } do |f| %>
+	<%=f.error_messages%>
+	<label>
+		Nome do relatório:
+		<%=f.text_field :title, :class => "textfield" %>
+	</label><br><br>
+	
+	<label>
+		Desejo ver os emails:
+		<%= f.radio_button :just_read, 1 %> apenas os e-mails lidos*
+		<%= f.radio_button :just_read, 0 %> todos os e-mails
+	</label>
+	<br><br>
+
+  	<label>
+		De qual disparo você deseja obter informações?
+    	<%= f.select :sender_id , Sender.find(:all).collect{|e| [e.title , e.id]}%>
+	</label>
+	
+	<br><br>
+	
+	<label>
+		De
+		<%=f.text_field :date_start, :class => "textfield" %>
+	</label>
+	
+	<label>
+		Até
+		<%=f.text_field :date_end, :class => "textfield" %>
+	</label>
+	
+	<br><br>
+	<button type="submit">Salvar</button>
+<% end %>
+<br><br>
+<i>*O relatório de e-mails lidos não pode ser considerado 100% concreta, pois alguns webmails bloqueiam o monitoramento.</i>

@@ -1,0 +1,19 @@
+<% content_for :head do %>
+	<%=render :partial => "calendar" %>
+<%end%>
+<div id="Breadcrumb">
+		administração > <a href="<%=reports_path%>">relatórios</a>
+	</div>
+	<div id="Content">
+		<span class="Titulo">Relatórios</span>
+		<div class="Linha"></div>
+		<div class="Toolbar">
+			<li class="Add"><%= link_to "Novo" , new_report_path%></li>
+			<li class="Help"><a href="#">Ajuda</a></li>
+		</div>
+		
+		<div id="Grid">
+			<%=render :partial => "form"%>
+		</div>
+		<div class="Linha"></div>
+	</div>

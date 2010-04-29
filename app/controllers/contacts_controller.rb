@@ -19,12 +19,12 @@ class ContactsController < ApplicationController
         #PEGA EMAILS        
         mails = params[:contact][:email]
 
-		#GRAVA CADA CONTATO SEPARADO POR VIRGULA
+		    #GRAVA CADA CONTATO SEPARADO POR VIRGULA
         mails.split(',').each do |e|
             @Contact = @Group.contacts.create(params[:contact])    		
             @Contact.email = e
             @Contact.save
-		end
+		    end
 
         redirect_to group_contacts_path
 	end
@@ -54,6 +54,12 @@ class ContactsController < ApplicationController
 	end
 
 	def load_group
+    if session[:logged]
+      true
+    else
+      redirect_to new_session_path
+    end
+    
 		@Group = Group.find(params[:group_id])		
 	end
 end

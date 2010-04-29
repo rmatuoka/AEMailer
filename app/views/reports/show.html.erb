@@ -1,0 +1,49 @@
+<div id="Breadcrumb">
+		administração > <a href="<%=reports_path%>">relatórios</a>
+	</div>
+	<div id="Content">
+		<span class="Titulo">Relatório</span>
+		<div class="Linha"></div>
+		<div class="Toolbar">
+			<li class="Add"><%= link_to "Novo" , new_report_path%></li>
+			<li class="Help"><a href="#">Ajuda</a></li>
+		</div>
+		
+		<div id="Grid">
+			<h3><%=@Report.title%></h3>
+			Exibindo: <b class="vermelho"><%=@JustRead%></b><br>
+			<br>
+			<table width="100%" cellpadding="1" cellspacing="2" border="0" class="tableReports">
+			<tr class="headerReports">
+			<td class="tdReports">E-Mail</td>
+			<td class="tdReports">Status</td>
+			<td class="tdReports">Data de Envio</td>
+			</tr>
+			<%
+			if !@Sents.blank?
+		        @Sents.each do |s|
+		            #LE O EMAIL
+		            @Contact = Contact.first(:conditions => ['id = ?', s.contact_id])
+					if s.readed > 0
+						read = "Lido"
+					else
+						read = "Não Lido"
+					end
+					%>
+					
+					<tr>
+					<td class="tdReports"><%=@Contact.email%></td>
+					<td class="tdReports"><%=read%></td>
+					<td class="tdReports"><%=s.updated_at.to_s_br%></td>
+					</tr>
+		    <%
+			    end
+		    end
+			%>
+			
+			</table>
+			<br>
+		</div>
+		<div class="Linha"></div>
+	</div>
+

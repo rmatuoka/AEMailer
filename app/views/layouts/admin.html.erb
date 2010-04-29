@@ -27,16 +27,18 @@
 			btnFecharAjuda
     });
 </script>
+<%=yield :head%>
 </head>
 <body>
 <div id="Geral">
 	<div id="Header">
 		<div id="Logo"></div>
 		<div id="Menu">
-			<li class="Noticias"><a href="<%=emails_path%>">E-Mails Mkts</a></li>
+			<li class="Contatos"><a href="<%=emails_path%>">E-Mails Mkts</a></li>
 			<li class="Usuarios"><a href="<%=users_path%>">Usu&aacute;rios</a></li>
 			<li class="Cases"><a href="<%=senders_path%>">Disparos</a></li>
 			<li class="Clientes"><a href="<%=groups_path%>">Grupos</a></li>
+			<li class="Noticias"><a href="<%=reports_path%>">Relatórios</a></li>
 		</div>
 	</div>
 	

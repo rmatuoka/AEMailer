@@ -9,12 +9,13 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20100427165843) do
+ActiveRecord::Schema.define(:version => 20100429151622) do
 
   create_table "contacts", :force => true do |t|
+    t.integer  "readed",     :limit => 1,                :null => false
     t.string   "email"
     t.integer  "group_id"
-    t.integer  "published",  :default => 1
+    t.integer  "published",               :default => 1
     t.datetime "created_at"
     t.datetime "updated_at"
   end
@@ -46,6 +47,16 @@ ActiveRecord::Schema.define(:version => 20100427165843) do
     t.datetime "updated_at"
   end
 
+  create_table "reports", :force => true do |t|
+    t.string   "title"
+    t.integer  "sender_id"
+    t.integer  "just_read"
+    t.datetime "date_start"
+    t.datetime "date_end"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
   create_table "senders", :force => true do |t|
     t.string   "title"
     t.datetime "created_at"
@@ -57,7 +68,7 @@ ActiveRecord::Schema.define(:version => 20100427165843) do
   create_table "sents", :force => true do |t|
     t.integer  "contact_id"
     t.integer  "sent"
-    t.integer  "read"
+    t.integer  "readed"
     t.integer  "sender_id"
     t.datetime "created_at"
     t.datetime "updated_at"

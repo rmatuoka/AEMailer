@@ -1,17 +1,5 @@
 class SessionsController < ApplicationController
 	layout "admin"
-  
-	def index
-		@Users = User.find(:all)
-	end
-
-	def new
-	  
-	end
-
-	def show
-
-	end
 
 	def create
 		@User = User.find(:first, :conditions => ['email = ? AND senha = ?', params[:email], params[:senha]])
@@ -19,7 +7,7 @@ class SessionsController < ApplicationController
 		if @User
 			session[:logged] = true
 			session[:login] = @User.email
-			redirect_to noticias_path
+			redirect_to emails_path
 		else
 			flash[:msg] = "Usuário e/ou senha inválidos."
 			render :action => "new"
@@ -29,5 +17,6 @@ class SessionsController < ApplicationController
 	def destroy
 		session[:logged] = false
 		redirect_to new_session_path
-	end
+  end
+
 end

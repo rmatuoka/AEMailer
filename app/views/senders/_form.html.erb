@@ -1,6 +1,6 @@
 <% if flash[:msg] %>
 <div id="mensagem">
-	<%=flash[:msg]%>
+	<h2><%=flash[:msg]%></h2>
 </div>
 <% end %>
 
@@ -8,12 +8,12 @@
 	<%=f.error_messages%>
 	<label>
 		Dê um nome ao seu disparo:
-		<%=f.text_field :title %>
+		<%=f.text_field :title, :class => "textfield" %>
 	</label><br><br>
 	
 	<label>
 		Qual será o assunto do e-mail?
-		<%=f.text_field :subject %>
+		<%=f.text_field :subject, :class => "textfield" %>
 	</label><br><br>
 
   <label>

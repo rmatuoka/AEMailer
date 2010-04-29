@@ -1,5 +1,7 @@
 class GroupsController < ApplicationController
-	layout "admin"
+	before_filter :autentica
+  
+  layout "admin"
 	
 	def index
 		@Groups = Group.find(:all)
@@ -46,5 +48,13 @@ class GroupsController < ApplicationController
 		if @Group.destroy
 			redirect_to groups_path
 		end
-	end
+  end
+
+  def autentica
+    if session[:logged]
+      true
+    else
+      redirect_to new_session_path
+    end
+  end
 end

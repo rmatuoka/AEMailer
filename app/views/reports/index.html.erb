@@ -1,0 +1,26 @@
+	<div id="Breadcrumb">
+		administração > <a href="<%=reports_path%>">relatórios</a>
+	</div>
+	<div id="Content">
+		<span class="Titulo">Relatórios</span>
+		<div class="Linha"></div>
+		<div class="Toolbar">
+			<li class="Add"><%= link_to "Novo" , new_report_path%></li>
+			<li class="Help"><a href="#" id="btnAjuda">Ajuda</a></li>
+		</div>
+		<%= render :file  => "layouts/_admhelp.html.erb" %>
+		<div id="Grid">
+			<table width="100%" cellspacing="0" cellpadding="0" border="0">
+			<% @Reports.each do |r| %>
+			<tr class="bgCinzaC">
+			<td class="Name"><li class="Bullet"><%=link_to r.title, report_path(r) %></li></td>
+			<td class="Actions">
+				<li class="Edit"><%= link_to "Editar", edit_report_path(r)%></li>
+				<li class="Del"><%= link_to "Excluir", report_path(r), :method => :delete, :confirm => "Tem certeza?"%></li>
+			</td>
+			</tr>
+			<% end %>
+			</table>
+		</div>
+		<div class="Linha"></div>
+	</div>

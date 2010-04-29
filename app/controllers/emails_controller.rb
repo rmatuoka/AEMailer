@@ -1,5 +1,7 @@
 class EmailsController < ApplicationController
-    layout "admin"
+    before_filter :autentica
+    
+   layout "admin"
 	
 	def index
 		@Emails = Email.find(:all)
@@ -46,5 +48,13 @@ class EmailsController < ApplicationController
 		if @Email.destroy
 			redirect_to emails_path
 		end
-	end
+  end
+
+  def autentica
+    if session[:logged]
+      true
+    else
+      redirect_to new_session_path
+    end
+  end    
 end

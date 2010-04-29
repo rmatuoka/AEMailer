@@ -1,0 +1,20 @@
+<div id="Breadcrumb">
+		administração > <a href="<%=senders_path%>">disparos</a>
+	</div>
+	<div id="Content">
+		<span class="Titulo">E-mails enviados com sucesso!</span>
+		<div class="Linha"></div>
+		<div class="Toolbar">
+			<li class="Add"><%= link_to "Novo" , new_sender_path%></li>
+			<li class="Help"><a href="#">Ajuda</a></li>
+		</div>
+		
+		<div id="Grid">
+			<h3>Dados do envio</h3><br>
+			<br>
+			Total de e-mails enviados: <%=session[:total]%><br>
+			
+		</div>
+		<div class="Linha"></div>
+	</div>
+
